@@ -1,15 +1,17 @@
-function PokemonCard() {
+function PokemonCard(props) {
   const pokemon = pokemonList[0];
 return (
     <figure>
-        {pokemon.hasOwnProperty('imgSrc') ?
-      <img src={pokemon.imgSrc} alt={pokemon.name} />
+        {props.pokemon.hasOwnProperty('imgSrc') ?
+      <img src={props.pokemon.imgSrc} alt={props.pokemon.name} />
     : <p>???</p> }
-      <figcaption>{pokemon.name}</figcaption>
+      <figcaption>{props.pokemon.name}</figcaption>
     </figure>
 )
 }
 export default PokemonCard;
+
+
 
 const pokemonList = [
   {
