@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from "./components/PokemonCard"
+import Navbar from "./components/Navbar"
 
 
 function App() {
@@ -17,10 +18,7 @@ function App() {
   return (
       <div className='pokedex'>
         <PokemonCard pokemon={pokemonList[count]}/>
-      <div className='button'>
-      <button onClick={handleClickLeft}>Précédent</button>
-      <button onClick={handleClickRight}>Suivant</button>
-      </div>
+        <Navbar count={count} setCount={setCount} pokemonList={pokemonList}/>
       </div>
  
   )
